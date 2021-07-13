@@ -1,0 +1,24 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	margin: 50px;
+}
+
+.margin-5{
+	margin: 5px !important;
+}
+
+.profile{}
+
+.profile > .profile-img{
+	float: left;
+}
+
+.profile > .profile-img > img{
+	margin-right: 10px;
+}
+
+.profile > .contact-info {}

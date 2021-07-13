@@ -5,23 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="js/script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
     <title>From Validation</title>
 </head>
 <body>
 
     <div class="card">
-        <form onsubmit="return validateForm()">
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name">
-            
-            <label for="last_name">Last Name</label>
-            <input type="text" name=last_name" id="last_name">
+        <div class="left-section">
+            <img id="avatar" src="img/avatar.svg" alt="">
+        </div>
 
-            <button type="submit" id="submit">Submit</button>
-        </form>
+        <div class="right-section">
+            <form onsubmit="return validateForm()">
+                <h1>Sign In</h1>
+                <h6 id="error-msg"></h6>
+            
+                <div>
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                </div>
+
+                <div>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name=last_name" id="last_name" placeholder="Last Name">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </div>
+
+                <div>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

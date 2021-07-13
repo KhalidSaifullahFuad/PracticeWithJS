@@ -1,24 +1,140 @@
+:root{
+    --color-primary: #564FCC;
+    --color-accent: #6C63FF;
+    --color-white: #FFFFFF;
+    --dark-gray: #2F2E41;
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-gray);
 }
 
 .card{
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    background-color: lightblue;
-    border-radius: 10px;
+    width: auto;
+    height: 250px;
+    border-radius: 0.5rem;
+    display: flex;
+    background-color:var(--color-white);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 70px 10px #17161d
 }
 
-label, button{
-    display: block;
-    margin: 10px 0px;
+/* -----------Card Left Section---------*/
+
+.card > .left-section{
+    min-width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: #6C63FF; */
+    background-color: var(--color-primary);
+    border-radius: 0.5rem 0 0 0.5rem;
 }
+
+.card > .left-section > #avatar{
+    width: 150px;
+}
+
+
+
+/* -----------Card Right Section---------*/
+
+.card > .right-section {
+    padding: 25px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card > .right-section h1{
+    padding-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-gray);
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+}
+
+.card > .right-section h6:empty:before {
+    content: "\200b";
+  }
+
+.card > .right-section h6{
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    color: red;
+    font-size: .6rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.card > .right-section label{
+    display: none;
+}
+
+.card > .right-section input{
+    display: block;
+    padding: 5px 10px;
+    border-radius: 1.2rem;
+    border: 0px;
+    margin-bottom: .8rem;
+    outline: none;
+    font-size: .8rem;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid var(--dark-gray);
+    width: 100%;
+}
+
+.card > .right-section input:focus{
+    border: 2px solid var(--color-primary);
+    transition: .5s
+}
+
+.card > .right-section  button{
+    width:100%;
+    padding: 5px;
+    border-radius: 1.2rem;
+    border: 0px;
+    background: var(--color-primary); 
+    color: var(--color-white);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.card > .right-section button:hover {
+    background-color: #6C63FF;
+    transition: .5s;
+}
+
+
+/* -----------Media Query---------*/
+
+@media (max-width: 600px){
+    .card{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin: 10px;
+    }
+
+    .card > .left-section, .card > .right-section{
+        height: 250px;
+        border-radius: 0.3rem 0.3rem 0 0;
+    }
+}
+

@@ -1,0 +1,26 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	margin:50px;
+}
+h1{
+	color: #0070C0;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+p{
+	font-size: 23px;
+	margin: 10px 0px 10px 0px; 
+}
+#profile-img{
+	float: left;
+}
+#profile-img{
+	margin-right: 20px;
+}
+#profile-img>img{
+	height: 190px;
+	width: 150px;
+}
