@@ -81,6 +81,13 @@ body{
     font-weight: 400;
 }
 
+.card > .right-section .username {
+    display: flex;
+    justify-content: space-between;
+}
+.card > .right-section .username div:first-child{
+    padding-right: .8rem;
+}
 
 .card > .right-section label{
     display: none;
@@ -89,7 +96,7 @@ body{
 .card > .right-section input{
     display: block;
     padding: 5px 10px;
-    border-radius: 1.2rem;
+    border-radius: .5rem;
     border: 0px;
     margin-bottom: .8rem;
     outline: none;
@@ -107,7 +114,7 @@ body{
 .card > .right-section  button{
     width:100%;
     padding: 5px;
-    border-radius: 1.2rem;
+    border-radius: .5rem;
     border: 0px;
     background: var(--color-primary); 
     color: var(--color-white);
