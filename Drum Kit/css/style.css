@@ -31,12 +31,12 @@
     border-radius: 0.8rem;
     box-shadow: 0 0 .3rem;
     text-shadow: 0 0 .3rem black;
+    transition: all .07s ease;
 }
 
-.key:hover{
+.playing{
     transform: scale(0.99);
     background: rgba(0, 0, 0, 0.404);
-    /* text-shadow: 0 0 1rem; */
     box-shadow: 0 0 1.5rem yellow;;
 }
 
