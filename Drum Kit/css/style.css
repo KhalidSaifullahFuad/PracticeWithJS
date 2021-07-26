@@ -36,7 +36,7 @@
     user-select: none;
 }
 
-.playing{
+.playing, .key:active{
     transform: scale(0.99);
     background: rgba(0, 0, 0, 0.404);
     box-shadow: 0 0 1.5rem yellow;;
