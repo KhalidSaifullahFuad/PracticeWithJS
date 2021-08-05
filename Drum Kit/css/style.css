@@ -20,8 +20,8 @@
 }
 
 .key{
-    height: 7rem;
-    width: 7rem;
+    height: 6rem;
+    width: 6rem;
     margin: 1rem;
     background: #0003;
     display: flex;
@@ -62,4 +62,20 @@
     margin-top: 0.5rem;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+@media (max-width: 380px) {
+    .key{
+        height: 5.5rem;
+        width: 5.5rem;
+        margin: .7rem;
+    }
+
+    .key-name{
+        font-size: 2rem;
+    }
+    
+    .key-sound{
+        font-size: .7rem;
+    }
 }

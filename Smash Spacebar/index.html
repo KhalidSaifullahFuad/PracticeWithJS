@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>Smash Spacebar</title>
+	</head>
+
+	<body class="container">
+		<div id="spacebar">
+			<div class="key-name">Spacebar</div>
+		</div>
+	</body>
+
+	<script>
+		var spacebar = document.getElementById("spacebar");
+		spacebar.addEventListener("click", onClick);
+
+		window.addEventListener("keydown", keyPress);  
+		window.addEventListener("keyup", keyRelease);
+
+		function keyPress(e) {
+			console.log(key.classList);
+			var key = document.getElementById("spacebar");
+
+			key.classList.add("playing");
+		}
+
+		function keyRelease(e) {
+			var key = document.getElementById("spacebar");
+			key.classList.remove("playing");
+		}
+
+		function onClick(e) {
+			var datakey = e.target.getAttribute("data-key");
+		}
+	</script>
+</html>
