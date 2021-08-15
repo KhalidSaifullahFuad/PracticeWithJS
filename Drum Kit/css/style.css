@@ -1,81 +1,85 @@
+:root {
+	--box-shadow: yellow;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .container {
-    height: 100vh;
-    width:100vw;
-    display: grid;
-    place-items: center;
-    background: #5f5d70;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	place-items: center;
+	background: #5f5d70;
 }
 
 .keys {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.key{
-    height: 6rem;
-    width: 6rem;
-    margin: 1rem;
-    background: #0003;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    border-radius: 0.8rem;
-    box-shadow: 0 0 .3rem;
-    text-shadow: 0 0 .3rem black;
-    transition: all .07s ease;
-    cursor: pointer;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-tap-highlight-color: transparent;
+.key {
+	height: 6rem;
+	width: 6rem;
+	margin: 1rem;
+	background: #0003;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.8rem;
+	box-shadow: 0 0 0.3rem;
+	text-shadow: 0 0 0.3rem black;
+	transition: all 0.07s ease;
+	cursor: pointer;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
-.playing, .key:active{
-    transform: scale(0.99);
-    background: rgba(0, 0, 0, 0.404);
-    box-shadow: 0 0 1.5rem yellow;;
+.playing,
+.key:active {
+	transform: scale(0.99);
+	background: rgba(0, 0, 0, 0.404);
+	box-shadow: 0 0 1.5rem var(--box-shadow);
 }
 
-.key-name{
-    font-size: 2.2rem;
-    color: #fff;
-    font-family: monospace;
-    font-weight: bold;
+.key-name {
+	font-size: 2.2rem;
+	color: #fff;
+	font-family: monospace;
+	font-weight: bold;
 }
 
-.key-sound{
-    color: yellow;
-    font-size: .9rem;
-    font-family: sans-serif;
-    margin-top: 0.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
+.key-sound {
+	color: rgb(180, 180, 180);
+	font-size: 0.9rem;
+	font-family: sans-serif;
+	margin-top: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 @media (max-width: 380px) {
-    .key{
-        height: 5.5rem;
-        width: 5.5rem;
-        margin: .7rem;
-    }
+	.key {
+		height: 5.5rem;
+		width: 5.5rem;
+		margin: 0.7rem;
+	}
 
-    .key-name{
-        font-size: 2rem;
-    }
-    
-    .key-sound{
-        font-size: .7rem;
-    }
+	.key-name {
+		font-size: 2rem;
+	}
+
+	.key-sound {
+		font-size: 0.7rem;
+	}
 }

@@ -23,7 +23,6 @@ table{
     width: 2.4rem;
     background: #2F2E41;
     border: 2px solid #000;
-    border-radius: 20px;
 }
 
 .tr .td:nth-child(4), .tr .td:nth-child(7){
