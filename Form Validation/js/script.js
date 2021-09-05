@@ -48,5 +48,4 @@ function capitalize(str){
 function validateEmail(email){
     var email_str = email.value;
 
-    if
 }
