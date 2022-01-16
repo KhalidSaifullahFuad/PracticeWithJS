@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "digital-7";
+	src: url("../fonts/digital-7_mono-webfont.woff2") format("woff2"),
+		url("../fonts/digital-7_mono-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+:root {
+	--light-black: rgb(93, 93, 93);
+	--light-blue: #98D9ED;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-size:2rem;
+	display: grid;
+	place-items: center;
+}
+
+.stopwatch {
+	position: relative;
+	height: 20rem;
+	width: 20rem;
+	display: grid;
+	place-items: center;
+}
+.stopwatch .body {
+    position: absolute;
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+	box-shadow: 
+        inset 0 0 0 12px var(--light-black), 
+        inset 0 0 0 28px #fff,
+		inset 0 0 0 40px var(--light-black);
+	background: white;
+	display: grid;
+	place-items: center;
+    z-index: 3;
+}
+
+.nob {
+	height: 1.3rem;
+	width: 1.5rem;
+	border: 12px solid var(--light-black);
+	border-bottom: none;
+	border-radius: 1.2rem 1.2rem 0 0;
+	position: absolute;
+    background: var(--light-blue);
+}
+
+.left-nob {
+	top: 16px;
+	left: 26px;
+	transform: rotate(318deg);
+}
+.right-nob {
+	top: 16px;
+	right: 26px;
+	transform: rotate(42deg);
+}
+
+.top-nob-head {
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -115%);
+	width: 5rem;
+	border: 12px solid var(--light-black);
+	border-radius: 1.2rem 1.2rem .8rem .8rem;
+	z-index: 1;
+}
+.top-nob-body {
+	top: 0px;
+	left: 50%;
+	height: 1.5rem;
+	transform: translate(-50%, -80%);
+	border-radius: 0;
+	border-bottom: none;
+	border-top: none;
+	position: absolute;
+	z-index: 2;
+	
+}
+
+.display {
+	width: 11rem;
+	height: 4rem;
+	background: var(--light-blue);
+	border-radius: 1rem;
+	border: 10px solid var(--light-black);
+    z-index: 5;
+	font-family: 'digital-7';
+	color: var(--light-black);
+	line-height: 4rem;
+	text-align: center;
+	font-size: 2.7rem;
+}
