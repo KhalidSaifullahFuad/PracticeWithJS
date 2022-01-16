@@ -1,0 +1,83 @@
+@font-face {
+	font-family: "digital-7";
+	src: url("../fonts/digital-7_mono-webfont.woff2") format("woff2"),
+		url("../fonts/digital-7_mono-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	place-items: center;
+	background: #ffc300;
+	font-size: clamp(3rem, 8vw, 8rem);
+	font-family: "digital-7";
+}
+h6{
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #ffdf76;	
+	text-shadow: 0 0 0 0 .4rem hsl(46, 97%, 43%);
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-size: clamp(3rem, 12vw, 12rem);
+}
+
+.time {
+	color: whitesmoke;
+	margin: 0px;
+}
+
+.hour {
+	display: none;
+}
+/* #colon::after, #colon::before, #dot::before{
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background: whitesmoke;
+	border-radius: 30%;
+	margin: .7rem 0;
+
+} */
+
+/*------------- media query ------------ */
+
+/* @media (max-width: 800px) {
+	.time {
+		font-size: 6.5rem;
+	}
+}
+
+@media (max-width: 580px) {
+	.time {
+		font-size: 5.5rem;
+	}
+}
+
+@media (max-width: 380px) {
+	.time {
+		font-size: 4.5rem;
+	}
+}
+
+@media (max-width: 380px) {
+	.time {
+		font-size: 3.5rem;
+	}
+} */
