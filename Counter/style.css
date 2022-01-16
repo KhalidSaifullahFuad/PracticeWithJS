@@ -5,8 +5,10 @@
 
 body{
     height: 100vh;
+    display: -ms-grid;
     display: grid;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
     background: #ddd;
 }
 
@@ -20,6 +22,8 @@ body{
     line-height: 10rem;
     font-family: monospace;
     font-size: 2rem;
-    user-select: none;
     box-shadow: 0 0 .2rem red;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
