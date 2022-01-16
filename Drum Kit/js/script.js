@@ -5,31 +5,29 @@ window.addEventListener("keydown", keyPress);
 window.addEventListener("keyup", keyRelease);
 
 function keyPress(e) {
-	var key = document.querySelector(`div[data-key='${e.keyCode}']`);
-	var audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+	const key = document.querySelector(`div[data-key='${e.keyCode}']`);
+	const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
 
 	if (!audio) return;
 	audio.currentTime = 0;
 	audio.play();
 
-	// document.documentElement.style.setProperty(
-	// 	"--box-shadow",
-	// 	random_bg_color()
-	// 	"#" + Math.floor(Math.random() * 16777215).toString(16)
-	// );
-    document.querySelector('body').style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+	const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+	key.style.color = randomColor;
+	
+	document.documentElement.style.setProperty("--key-txt-color", randomColor);
 	key.classList.add("playing");
 	console.log(key.innerHTML);
 }
 
 function keyRelease(e) {
-	var key = document.querySelector(`div[data-key='${e.keyCode}']`);
+	const key = document.querySelector(`div[data-key='${e.keyCode}']`);
 	key.classList.remove("playing");
 }
 
 function onClick(e) {
-	var datakey = e.target.getAttribute("data-key");
-	var audio = document.querySelector(`audio[data-key='` + datakey + `']`);
+	const datakey = e.target.getAttribute("data-key");
+	const audio = document.querySelector(`audio[data-key='${datakey}']`);
 
 	if (!audio) return;
 	audio.currentTime = 0;
@@ -37,10 +35,10 @@ function onClick(e) {
 }
 
 function random_bg_color() {
-	var x = Math.floor(Math.random() * 256);
-	var y = 100 + Math.floor(Math.random() * 256);
-	var z = 50 + Math.floor(Math.random() * 256);
-	var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+	const x = Math.floor(Math.random() * 256);
+	const y = 100 + Math.floor(Math.random() * 256);
+	const z = 50 + Math.floor(Math.random() * 256);
+	const bgColor = `rgb(${x},${y},${z})`;
 	console.log(bgColor);
 	return bgColor;
 }
